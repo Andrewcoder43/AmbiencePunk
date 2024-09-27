@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "AmbiencePunk",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AmbiencePunk"
+	}
+}

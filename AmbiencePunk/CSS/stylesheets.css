@@ -1,0 +1,220 @@
+/* Reset default styles for html and body */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Define CSS variables for consistent theming */
+:root {
+    --primary-bg: linear-gradient(to bottom, #3498db, #2c3e50);
+    --text-color: #fff;
+    --slider-bg: #ccc;
+    --slider-active: #aaa;
+}
+
+/* Set basic styles for the body element */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style the main heading */
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Style range input sliders */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background-color: var(--slider-bg);
+    border-radius: 2px;
+}
+
+/* Style the slider thumb for WebKit and Mozilla */
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: var(--text-color);
+    border: 1px solid var(--slider-bg);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style the slider track for WebKit and Mozilla */
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+    height: 5px;
+    background-color: #999;
+    border-radius: 2px;
+}
+
+/* Style the active state of the slider thumb */
+input[type="range"]:active::-webkit-slider-thumb,
+input[type="range"]:active::-moz-range-thumb {
+    background-color: var(--slider-active);
+    border-color: var(--slider-active);
+}
+
+/* Center-align text and set color */
+.centered-text {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Style custom signup button */
+.custom-signup-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+/* Style footer column headings and images */
+.col-lg-2.col-md-3.col-sm-6 h5 a,
+.col-lg-2.col-md-3.col-sm-6 img {
+    text-decoration: none;
+    color: var(--text-color);
+    max-width: 60px;
+    height: auto;
+}
+
+/* Style links within divs */
+div a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Left-align text */
+.left-align {
+    text-align: left;
+}
+
+/* Set dimensions for custom icon */
+.custom-icon {
+    width: 350px;
+    height: auto;
+}
+
+/* Style the header */
+header {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* Style info text */
+#info {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Style scrollbar */
+.scrollbar {
+    margin-left: 30px;
+    float: left;
+    height: 300px;
+    width: 65px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+/* Style wrapper div */
+#wrapper {
+    text-align: center;
+    width: 500px;
+    margin: auto;
+}
+
+/* Style icon wrapper */
+.icon-wrapper {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+/* Style icons and images */
+.icon-grid i,
+.image-grid img {
+    cursor: pointer;
+}
+
+/* Add styles for weather canvas */
+#weatherCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1157b3;
+    z-index: -1;
+}
+
+.select-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#weatherSelect {
+    position: relative;
+    z-index: 100;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Add styles for sun element */
+#sun {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0 0 50px #FFD700;
+    display: none;
+    margin-top: 20px;
+}
+
+/* Add radial gradient effect to sun element */
+#sun::before,
+#sun::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, transparent 70%, #FFD700 70%);
+    transform: translate(-50%, -50%);
+}
+
+/* Rotate the second radial gradient for sun element */
+#sun::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Modify the weatherCanvas background for snow */
+#weatherCanvas.snow {
+    background-color: #e6f3ff; /* Lighter blue for snowy sky */
+}
+
